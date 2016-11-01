@@ -10,4 +10,40 @@ public class Order {
     private boolean isNeedSmokeCar;
     private int needCarClass;
     private Car carReserver;
+
+    public Order(String startPoint, String endPoint, boolean isNeedBabySeat, boolean isNeedSmokeCar, int needCarClass) {
+        this.startPoint = startPoint;
+        this.endPoint = endPoint;
+        this.isNeedBabySeat = isNeedBabySeat;
+        this.isNeedSmokeCar = isNeedSmokeCar;
+        this.needCarClass = needCarClass;
+    }
+
+    public String getStartPoint() {
+        return startPoint;
+    }
+
+    public String getEndPoint() {
+        return endPoint;
+    }
+
+    public boolean isNeedBabySeat() {
+        return isNeedBabySeat;
+    }
+
+    public boolean isNeedSmokeCar() {
+        return isNeedSmokeCar;
+    }
+
+    public int getNeedCarClass() {
+        return needCarClass;
+    }
+
+    public Car getCarReserver() {
+        return carReserver;
+    }
+
+    public void setCarReserver(Car carReserver) {
+        this.carReserver = carReserver;
+    }
 }
