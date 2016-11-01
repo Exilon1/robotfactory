@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
- * Created by дима on 30.10.2016.
+ * Created by Alexey on 30.10.2016.
  */
 public class Initialization {
 
