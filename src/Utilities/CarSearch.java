@@ -21,8 +21,8 @@ public class CarSearch {
     }
 
     private static boolean isSuitableCar(Car car, Order order) {
-        System.out.println(car);
-        System.out.println(order);
+    //    System.out.println(car);
+
         boolean isSuitableCar = car.getCarClass()==order.getNeedCarClass() &&
                                 car.isHaveBabySeat()==order.isNeedBabySeat() &&
                                 car.isSmokeCar()==order.isNeedSmokeCar();

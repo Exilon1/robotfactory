@@ -23,7 +23,8 @@ public class OrderReader {
     }
 
     public static Order orderRead(String request) throws Exception {
-        String[] params = request.split("|");
+        String[] params = request.split("\\|");
+        System.out.println(params[1]);
         if(params.length<5)
             throw new NotCompleteRequestException();
         if(!"да".equals(params[2].toLowerCase()) && !"нет".equals(params[2].toLowerCase()))

@@ -12,7 +12,7 @@ public class main {
         List<Car> carList = Initialization.initCarArray();
         Scanner scanner = new Scanner(System.in);
 
-        Thread myThready = new Thread(new Runnable() {
+        Runnable trede = new Runnable() {
             public void run() //Этот метод будет выполняться в побочном потоке
             {
                 while (true) {
@@ -21,14 +21,15 @@ public class main {
                     Order order = null;
                     try {
                         order = OrderReader.orderRead(request);
+                        System.out.println(order);
                     } catch (Exception e) {
                         e.getMessage();
                     }
                     CarSearch.searchFreeCar(carList, order);
                 }
             }
-        });
-        myThready.start();
+        };
+        trede.run();
 
     }
 }
