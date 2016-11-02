@@ -18,7 +18,8 @@ public class OrderReader {
         return SingletonHelper.SINGLETON;
     }
 
-    public static Order orderRead() {
+    public static Order orderRead(String request) {
+        String[] params = request.split("|");
         return null;
     }
 
