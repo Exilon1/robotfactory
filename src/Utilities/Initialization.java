@@ -2,6 +2,7 @@ package Utilities;
 
 import Entity.Car;
 import Entity.Driver;
+import storage.CarList;
 
 import java.util.Arrays;
 import java.util.List;
@@ -18,7 +19,7 @@ public class Initialization {
     private static String[] carMarks = {"Bugatti", "Lamborghini", "Ferrari", "McLaren"};
 
     public static List<Car> initCarArray() {
-        return Stream.generate(Initialization::nextCar).limit(10).collect(Collectors.toList());
+        return Stream.generate(Initialization::nextCar).limit(10).collect(Collectors.toCollection(CarList::getInstance));
     }
 
     private static int i=0;
