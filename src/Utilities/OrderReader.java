@@ -39,7 +39,8 @@ public class OrderReader {
         boolean isNeedSmokeCar = "да".equals(params[3].toLowerCase());
         int needCarClass = Integer.valueOf(params[4]);
 
-        return new Order(startPoint, endPoint, isNeedBabySeat, isNeedSmokeCar, needCarClass);
+    //    return new Order(startPoint, endPoint, isNeedBabySeat, isNeedSmokeCar, needCarClass);
+        return null;
     }
 
 
