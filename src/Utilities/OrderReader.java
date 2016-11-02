@@ -35,15 +35,11 @@ public class OrderReader {
 
         String startPoint = params[0];
         String endPoint = params[1];
-        boolean isNeedBabySeat = "да".equals(params[2].toLowerCase()) ? true : false;
-        boolean isNeedSmokeCar = "да".equals(params[3].toLowerCase()) ? true : false;
+        boolean isNeedBabySeat = "да".equals(params[2].toLowerCase());
+        boolean isNeedSmokeCar = "да".equals(params[3].toLowerCase());
         int needCarClass = Integer.valueOf(params[4]);
 
-        Order order = new Order(startPoint, endPoint, isNeedBabySeat, isNeedSmokeCar, needCarClass);
-
-        //TODO
-
-        return null;
+        return new Order(startPoint, endPoint, isNeedBabySeat, isNeedSmokeCar, needCarClass);
     }
 
 
