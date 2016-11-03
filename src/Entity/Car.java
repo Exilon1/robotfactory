@@ -87,7 +87,6 @@ public class Car {
                 ", isHaveBabySeat=" + isHaveBabySeat +
                 ", isSmokeCar=" + isSmokeCar +
                 ", carClass=" + carClass +
-                ", carStatus='" + carStatus + '\'' +
                 '}';
     }
 }

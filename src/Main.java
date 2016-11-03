@@ -18,16 +18,15 @@ public class Main {
             public void run() //Этот метод будет выполняться в побочном потоке
             {
                 while (true) {
-                    FreeTheCar.freeTheCar(carList);
-
                     String request = scanner.nextLine();
+
+                    FreeTheCar.freeTheCar(carList);
                     Order order = null;
                     try {
                         order = OrderReader.orderRead(request);
-                        if (order==null)
-                            continue;
                     } catch (Exception e) {
-                        e.getMessage();
+                        System.out.println(e.getMessage());
+                        continue;
                     }
                     Car car = CarSearch.searchFreeCar(carList, order);
                     if (car == null) {
