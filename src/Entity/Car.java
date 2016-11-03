@@ -1,5 +1,7 @@
 package Entity;
 
+import java.util.Date;
+
 /**
  * Created by дима on 30.10.2016.
  */
@@ -15,6 +17,8 @@ public class Car {
     public static final int TYPE_OF_CLASS_BUSYNESS = 1;
     public static final String TYPE_OF_STATUS_FREE = "Свободен";
     public static final String TYPE_OF_STATUS_RESERVED = "Занят";
+
+    private Date reservedTime;
 
     public Car(String carMark, String carNumber, int carClass) {
         this.carMark = carMark;
@@ -64,6 +68,14 @@ public class Car {
 
     public void setCarStatus(String carStatus) {
         this.carStatus = carStatus;
+    }
+
+    public Date getReservedTime() {
+        return reservedTime;
+    }
+
+    public void setReservedTime(Date reservedTime) {
+        this.reservedTime = reservedTime;
     }
 
     @Override

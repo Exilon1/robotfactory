@@ -30,13 +30,13 @@ public class Initialization {
         String carNumber = allChars.charAt(random.nextInt(allChars.length())) +
                 Integer.toString((random.nextInt(9)+1)*100 + random.nextInt(100)); //генерирует номер вида a000
 
-        if( i>3 )
+        if ( i>3 )
             i = 0;
         String carMark = carMarks[i];
         i++;
 
         int carClass;
-        if(i%2==0)
+        if (i%2==0)
             carClass = Car.TYPE_OF_CLASS_ECONOMIC;
         else carClass = Car.TYPE_OF_CLASS_BUSYNESS;
 

@@ -9,7 +9,7 @@ public class Order {
     private boolean isNeedBabySeat;
     private boolean isNeedSmokeCar;
     private int needCarClass;
-    private Car carReserver;
+
 
     public Order(String startPoint, String endPoint, boolean isNeedBabySeat, boolean isNeedSmokeCar, int needCarClass) {
         this.startPoint = startPoint;
@@ -39,11 +39,4 @@ public class Order {
         return needCarClass;
     }
 
-    public Car getCarReserver() {
-        return carReserver;
-    }
-
-    public void setCarReserver(Car carReserver) {
-        this.carReserver = carReserver;
-    }
 }
