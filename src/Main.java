@@ -1,7 +1,7 @@
 
 
 /**
- * Created by Alexey on 30.10.2016.
+ * Created by Alexey on 6.11.2016.
  */
 public class Main {
     public static void main(String[] args) {
