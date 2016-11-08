@@ -1,5 +1,9 @@
 package util;
 
+import factory.AbstractDetailFactory;
+import factory.AppleFactory;
+import factory.SamsungFactory;
+import factory.SonyFactory;
 import products.bodies.AbstractBody;
 import products.bodies.AppleBody;
 import products.bodies.SamsungBody;
@@ -36,6 +40,10 @@ public class OrderExecutor {
     }
 
 
+    AbstractDetailFactory appleFactory = new AppleFactory();
+    AbstractDetailFactory samsungFactory = new SamsungFactory();
+    AbstractDetailFactory sonyFactory = new SonyFactory();
+
     AbstractHead head;
     AbstractBody body;
     AbstractHand leftHand;
@@ -51,44 +59,44 @@ public class OrderExecutor {
             switch (i) {
                 case 0: {
                     switch (s) {
-                        case "Apple": head = new AppleHead(); break;
-                        case "Samsung": head = new SamsungHead(); break;
-                        case "Sony": head = new SonyHead(); break;
+                        case "Apple": head = appleFactory.createHead(); break;
+                        case "Samsung": head = samsungFactory.createHead(); break;
+                        case "Sony": head = sonyFactory.createHead(); break;
                     }
                 } break;
                 case 1: {
                     switch (s) {
-                        case "Apple": body = new AppleBody(); break;
-                        case "Samsung": body = new SamsungBody(); break;
-                        case "Sony": body = new SonyBody(); break;
+                        case "Apple": body = appleFactory.createBody(); break;
+                        case "Samsung": body = samsungFactory.createBody(); break;
+                        case "Sony": body = sonyFactory.createBody(); break;
                     }
                 } break;
                 case 2: {
                     switch (s) {
-                        case "Apple": leftHand = new AppleHend("Left"); break;
-                        case "Samsung": leftHand = new SamsungHand("Left"); break;
-                        case "Sony": leftHand = new SonyHand("Left"); break;
+                        case "Apple": leftHand = appleFactory.createHand("Left"); break;
+                        case "Samsung": leftHand = samsungFactory.createHand("Left"); break;
+                        case "Sony": leftHand = sonyFactory.createHand("Left"); break;
                     }
                 } break;
                 case 3: {
                     switch (s) {
-                        case "Apple": rightHand = new AppleHend("Right"); break;
-                        case "Samsung": rightHand = new SamsungHand("Right"); break;
-                        case "Sony": rightHand = new SonyHand("Right"); break;
+                        case "Apple": rightHand = appleFactory.createHand("Right"); break;
+                        case "Samsung": rightHand = samsungFactory.createHand("Right"); break;
+                        case "Sony": rightHand = sonyFactory.createHand("Right"); break;
                     }
                 } break;
                 case 4: {
                     switch (s) {
-                        case "Apple": leftLeg = new AppleLeg("Left"); break;
-                        case "Samsung": leftLeg = new SamsungLeg("Left"); break;
-                        case "Sony": leftLeg = new SonyLeg("Left"); break;
+                        case "Apple": leftLeg = appleFactory.createLeg("Left"); break;
+                        case "Samsung": leftLeg = samsungFactory.createLeg("Left"); break;
+                        case "Sony": leftLeg = sonyFactory.createLeg("Left"); break;
                     }
                 } break;
                 case 5: {
                     switch (s) {
-                        case "Apple": rightLeg = new AppleLeg("Right"); break;
-                        case "Samsung": rightLeg = new SamsungLeg("Right"); break;
-                        case "Sony": rightLeg = new SonyLeg("Right"); break;
+                        case "Apple": rightLeg = appleFactory.createLeg("Right"); break;
+                        case "Samsung": rightLeg = samsungFactory.createLeg("Right"); break;
+                        case "Sony": rightLeg = sonyFactory.createLeg("Right"); break;
                     }
                 } break;
             }
