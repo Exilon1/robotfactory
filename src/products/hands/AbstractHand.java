@@ -7,9 +7,13 @@ import products.AbstractDetail;
  */
 public abstract class AbstractHand implements AbstractDetail {
 
-    private String type;
+    String type;
 
     AbstractHand(String type) {
         this.type = type;
+    }
+
+    public String getType() {
+        return type;
     }
 }

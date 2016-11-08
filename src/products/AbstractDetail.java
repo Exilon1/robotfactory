@@ -6,4 +6,5 @@ package products;
 public interface AbstractDetail {
 
     void test();
+    String getMark();
 }

@@ -9,9 +9,13 @@ import products.heads.AbstractHead;
  */
 public abstract class AbstractLeg implements AbstractDetail {
 
-    private String type;
+    String type;
 
     AbstractLeg(String type) {
         this.type = type;
+    }
+
+    public String getType() {
+        return type;
     }
 }
