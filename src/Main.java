@@ -13,6 +13,10 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
+        System.out.println("Указать лишь марку в форме\n" +
+                "head/body/left_hand/right_hand/left_leg/right_leg");
+        System.out.println();
+
         String request;
         while (true) {
             request = scanner.nextLine();
