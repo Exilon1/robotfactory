@@ -100,6 +100,6 @@ public class OrderExecutor {
         body.attachHead(head);
         body.attachHends(leftHand, rightHand);
         body.attachLegs(leftLeg, rightLeg);
-        return null;
+        return body;
     }
 }
