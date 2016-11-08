@@ -48,7 +48,7 @@ public abstract class AbstractBody implements AbstractDetail {
             builder.append(" ");
             builder.append("head\n");
 
-            System.out.println("I'm a robot with\n" + builder.toString());
+            head.tellSomething("I'm a robot with\n" + builder.toString());
         }
         else System.out.println("I'm an Apple body and I don't have limbs.");
     }

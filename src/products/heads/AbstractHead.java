@@ -7,7 +7,7 @@ import products.AbstractDetail;
  */
 public abstract class AbstractHead implements AbstractDetail {
 
-    void tellSomething(String spell) {
+    public void tellSomething(String spell) {
         System.out.println(spell);
     }
 }
